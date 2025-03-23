@@ -1,0 +1,27 @@
+.DS_Store
+
+# Adobe Illustrator
+*.ai
+
+# MATLAB
+*.asv
+*.mat
+
+# Visual Studio Code
+.vscode
+
+# Latex
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.aux
+*.fls
+*.fdb_latexmk
+*.bbl
+
+*.bib
+
+# Main PDF file
+doc/tam514.pdf
