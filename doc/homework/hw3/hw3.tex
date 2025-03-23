@@ -104,7 +104,6 @@ Hence, asymptotically the mode shapes reduce to a complete set of sine functions
 In the limit, the system behaves as if there is no spring connecting the two rods, with both of them vibrating like \emph{fixed-free} rods. 
 Effects of the spring connection only manifest at large time scales.
 
-\newpage
 \begin{problem}
     \begin{wrapfigure}{r}{0.45\textwidth}
         \vspace{0.75cm}
@@ -125,7 +124,8 @@ Effects of the spring connection only manifest at large time scales.
     \end{enumerate}
 \end{problem}
 
-The MATLAB code for this problem can be found at \todo{add link}. 
+The MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/doc/homework/hw3/assets/hw3_p2.m} and \url{https://github.com/sy-cui/TAM514/blob/main/doc/homework/hw3/assets/hw3_p2_eigen.m}. 
+Some other helper functions can be found in the same directory. 
 The code is verified to be correct on some simpler problems (e.g.~setting $k_0 = k_1 = k_2 = 0$, $M_0 = M_1 = M_2 = 0$, or leaving one to be nonzero).
 \begin{enumerate}[(i)]
 \item { % 2(i)
@@ -299,7 +299,7 @@ The code is verified to be correct on some simpler problems (e.g.~setting $k_0 =
     \includegraphics[width=0.5\textwidth]{homework/hw3/assets/hw3_p3.png}
 \end{figure}
 
-MATLAB code for this problem can be found at \todo{add link}.
+MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/doc/homework/hw3/assets/hw3_p3.m}.
 
 We follow the same methodology as in Problem 2, where we form the discretized eigenvalue problem $\bt{K} \bv{u} = \tilde{\omega}^2 \bt{M} \bv{u}$. 
 The same Lagrangian basis functions are used with the abscissa chosen to be $N + 1$ Gauss-Legendre-Lobatto points (polynomial order $N + 1$). 
@@ -452,6 +452,8 @@ with $\bar{u}(x, t)$, $\varphi_n(x)$, and $\eta_n(t)$ given in \cref{eqn:hw3_p4_
     \centering
     \includegraphics[width=0.8\textwidth]{homework/hw3/assets/hw3_p5.pdf}
 \end{figure}
+
+MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/doc/homework/hw3/assets/hw3_p5.m}.
 
 \begin{enumerate}[(i)]
 \item {
