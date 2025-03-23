@@ -1,0 +1,126 @@
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+
+\hypersetup{
+    colorlinks = true,
+    urlcolor   = blue,
+    citecolor  = blue,
+}
+
+\sisetup{
+    unit-mode = text,
+    number-mode = text,
+    reset-text-family = false,
+    reset-text-series = false,
+    reset-text-shape = false,
+    range-phrase = \text{--},
+    range-units = single,
+    list-units = single,
+    per-mode = symbol,
+    number-unit-product = \,
+}
+
+\captionsetup{width=\dimexpr\textwidth-2cm\relax}
+% \captionsetup[figure]{
+%   indention=6em
+% }
+% \captionsetup[table]{
+%   indention=6em
+% }
+% \newtheorem{theorem}{Theorem}[subsection]
+% \newtheorem{corollary}{Corollary}[theorem]
+% \newtheorem{lemma}{Lemma}[subsection]
+% \newtheorem{proposition}{Proposition}[subsection]
+% \newtheorem{pcorollary}{Corollary}[proposition]
+% \newtheorem{remark}{Remark}[subsection]
+
+\makeatletter
+\DeclareRobustCommand\bigop[1]{%
+  \mathop{\vphantom{\sum}\mathpalette\bigop@{#1}}\slimits@
+}
+\newcommand{\bigop@}[2]{%
+  \vcenter{%
+    \sbox\z@{$#1\sum$}%
+    \hbox{\resizebox{\ifx#1\displaystyle.9\fi\dimexpr\ht\z@+\dp\z@}{!}{$\m@th#2$}}%
+  }%
+}
+\makeatother
+\newcommand{\assem}{\DOTSB\bigop{\mathrm{A}}}
+
+
+% \renewcommand\qedsymbol{$\mathscr{Q.E.D}$} % For proof
+\newcommand{\bv}[1]{\ensuremath{\bm{#1}}} % for bold font vectors
+\newcommand{\bt}[1]{\ensuremath{\mathbf{#1}}} % for bold font tensors
+\newcommand{\order}[1]{\ensuremath{\mathcal{O} \left( #1 \right)}}
+\newcommand{\trace}[1]{\ensuremath{\textrm{tr} \left( #1 \right)}}
+\newcommand{\cofactor}[1]{\ensuremath{\textrm{cof} \left( #1 \right)}}
+\newcommand{\adjoint}[1]{\ensuremath{\textrm{adj} \left( #1 \right)}}
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\sign}{sgn}
+
+\newcommand{\matlab}{\textit{MATLAB}} 
+\newcommand{\del}{\ensuremath{\nabla}}
+\newcommand{\todo}[1]{\textcolor{blue}{TODO: #1}}
+\newcommand{\note}[1]{\textcolor{blue}{#1}}
+
+\renewcommand{\emph}[1]{\ul{\textit{#1}}}
+\renewcommand{\mark}[1]{\textcolor{red}{#1}}
+
+% Problem Environment
+\newenvironment{problem}
+    { \refstepcounter{problem} \begin{mdframed}[backgroundcolor=gray!20] }
+    {  \end{mdframed}}
+
+% Problem Environment
+\newenvironment{codenv}[1]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1} \\}
+    {  \end{mdframed}}
+
+
+% Errata
+\newenvironment{errata}{
+    \par\medskip % Add some space before the environment
+    \textbf{\textcolor{red}{Errata:}} \par % Pre-defined header
+    \color{red} % Set color to red
+    \itshape % Italicize text
+}{
+    \par\medskip % Add some space after the environment
+}
+
+\newcounter{problem}
+\newenvironment{prf}[2][]{
+\ifstrempty{#1} % If empty
+  {\mdfsetup{
+    frametitle={
+    \tikz[baseline=(current bounding box.east),outer sep=0pt]
+    \node[anchor=east,rectangle,fill=blue!20]
+    {\strut Proof};}}
+  }{\mdfsetup{ % Else (not empty)
+    frametitle={%
+      \tikz[baseline=(current bounding box.east),outer sep=0pt]
+      \node[anchor=east,rectangle,fill=blue!20]
+      {\strut Proof~:~#1};
+    }
+  }
+}
+\mdfsetup{
+  innertopmargin=10pt,
+  linecolor=blue!20,
+  linewidth=2pt,
+  topline=true,
+  frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax\label{#2}}{\end{mdframed}}
+
+\numberwithin{equation}{problem} % equation numbering
+\numberwithin{figure}{problem} % figure numbering
+\numberwithin{table}{problem} % table numbering
+\numberwithin{algorithm}{problem} % algorithm numbering
+
+% \sectionfont{\fontsize{11}{15}\selectfont}
+
+
