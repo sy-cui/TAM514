@@ -124,7 +124,7 @@ Effects of the spring connection only manifest at large time scales.
     \end{enumerate}
 \end{problem}
 
-The MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/doc/homework/hw3/assets/hw3_p2.m} and \url{https://github.com/sy-cui/TAM514/blob/main/doc/homework/hw3/assets/hw3_p2_eigen.m}. 
+The MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/latex/homework/hw3/assets/hw3_p2.m} and \url{https://github.com/sy-cui/TAM514/blob/main/latex/homework/hw3/assets/hw3_p2_eigen.m}. 
 Some other helper functions can be found in the same directory. 
 The code is verified to be correct on some simpler problems (e.g.~setting $k_0 = k_1 = k_2 = 0$, $M_0 = M_1 = M_2 = 0$, or leaving one to be nonzero).
 \begin{enumerate}[(i)]
@@ -171,7 +171,7 @@ The code is verified to be correct on some simpler problems (e.g.~setting $k_0 =
     \end{aligned}
     \end{equation}
     which is readily computable given the material parameters. 
-    The integrals can be computed \emph{exactly} using Gauss quadratures by virtual of the integrands being polynomials. 
+    The integrals can be computed \emph{exactly} using Gauss quadratures by virtue of the integrands being polynomials. 
     Hence, we need only choose the vector $\bv{u} = [u_i] \in \mathbb{R}^4, u_0 = 0$ to construct a polynomial trial function. 
     Based on the lecture, these coefficients $u_1, u_2, u_3$ should be chosen arbitrarily. 
     Here, however, we elect to use a more systematic approach known as the Rayleigh quotient iteration:
@@ -214,7 +214,7 @@ The code is verified to be correct on some simpler problems (e.g.~setting $k_0 =
         \caption{Material parameters for Problem 2. }
         \label{tab:hw3_p2_params}
     \end{table}
-    The results of the Rayleigh quotient iterations is tabulated in \cref{tab:hw3_p2_rq_results}, and plotted in \cref{tab:hw3_p2_rq_results}.
+    The results of the Rayleigh quotient iterations is tabulated in \cref{tab:hw3_p2_rq_results}, and plotted in \cref{fig:hw3_p2_rq_results}.
     The so-called exact results are obtained by using a high-order polynomial ($N = 10$) to approximate the first eigenfunction. 
     This is, of course, not exact as the eigenfunctions are sinusoidal and thus cannot be approximated exactly in the polynomial space. 
     However, based on insights from spectral methods, the numerical error is expected to be small when high polynomial orders are used for this type of Sturm-Liouville problem. 
@@ -240,7 +240,7 @@ The code is verified to be correct on some simpler problems (e.g.~setting $k_0 =
     \end{table}
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=0.9\textwidth]{homework/hw3/assets/hw3_p2_rq.pdf}
+        \includegraphics[width=\textwidth]{homework/hw3/assets/hw3_p2_rq.pdf}
         \caption{Rayleigh quotient iteration convergence of the first eigenfunction (left) and eigenvalue (right), compared with the ``exact'' value. 
         The ``exact'' value is obtained by using a high polynomial order ($N = 10$).}
         \label{fig:hw3_p2_rq_results}
@@ -275,7 +275,7 @@ The code is verified to be correct on some simpler problems (e.g.~setting $k_0 =
     \end{table}
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=0.52\textwidth]{homework/hw3/assets/hw3_p2_rr.pdf}
+        \includegraphics[width=0.6\textwidth]{homework/hw3/assets/hw3_p2_rr.pdf}
         \caption{Rayleigh-Ritz approximation of the first three eigenfunctions.}
         \label{fig:hw3_p2_rr_results}
     \end{figure}
@@ -299,7 +299,7 @@ The code is verified to be correct on some simpler problems (e.g.~setting $k_0 =
     \includegraphics[width=0.5\textwidth]{homework/hw3/assets/hw3_p3.png}
 \end{figure}
 
-MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/doc/homework/hw3/assets/hw3_p3.m}.
+MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/latex/homework/hw3/assets/hw3_p3.m}.
 
 We follow the same methodology as in Problem 2, where we form the discretized eigenvalue problem $\bt{K} \bv{u} = \tilde{\omega}^2 \bt{M} \bv{u}$. 
 The same Lagrangian basis functions are used with the abscissa chosen to be $N + 1$ Gauss-Legendre-Lobatto points (polynomial order $N + 1$). 
@@ -453,7 +453,7 @@ with $\bar{u}(x, t)$, $\varphi_n(x)$, and $\eta_n(t)$ given in \cref{eqn:hw3_p4_
     \includegraphics[width=0.8\textwidth]{homework/hw3/assets/hw3_p5.pdf}
 \end{figure}
 
-MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/doc/homework/hw3/assets/hw3_p5.m}.
+MATLAB code for this problem can be found at \url{https://github.com/sy-cui/TAM514/blob/main/latex/homework/hw3/assets/hw3_p5.m}.
 
 \begin{enumerate}[(i)]
 \item {
@@ -653,7 +653,8 @@ Substituting \cref{eqn:hw3_p6_decomp} into \cref{eqn:hw3_p6_rayleigh_quotient} l
     }{
         \sum_{i,j=1}^\infty \mu_i \mu_j \delta_{ij}
     } \\
-    &= \frac{\sum_{i=1}^\infty \mu_i^2 \omega_i^2}{\sum_{i=1}^\infty \mu_i^2} = \frac{\omega_r^2 + \epsilon^2\sum_{i=1, i\neq r}^\infty \eta_i^2 \omega_i^2}{1 + \epsilon^2 \sum_{i=1}^\infty \eta_i^2}.
+    &= \frac{\sum_{i=1}^\infty \mu_i^2 \omega_i^2}{\sum_{i=1}^\infty \mu_i^2} 
+    = \frac{\omega_r^2 + \epsilon^2\sum_{i=1, i\neq r}^\infty \eta_i^2 \omega_i^2}{1 + \epsilon^2 \sum_{i=1, i\neq r}^\infty \eta_i^2}.
 \end{aligned}
 \end{equation}
 where we have leveraged the ortho-normality conditions \cref{eqn:hw3_p6_orthonormality}.
@@ -661,9 +662,8 @@ Note also that asymptotically, $1 / (1 + \epsilon \eta) = 1 - \epsilon \eta + \o
 Hence, the Rayleigh quotient can be further expanded as 
 \begin{equation}
 \begin{aligned}
-    R[\varphi(x)] &= \left(\omega_r^2 + \epsilon^2 \sum_{\substack{i=1, \\ i\neq r}}^\infty \eta_i^2 \omega_i^2\right) \left(1 - \epsilon^2 \sum_{i=1}^\infty \eta_i^2 + \order{\epsilon^4} \right) \\
-    &= \omega_r^2 + \epsilon^2 \sum_{i=1}^\infty \eta_i^2 (\omega_i^2 - \omega_r^2) + \order{\epsilon^4}.
+    R[\varphi(x)] &= \left(\omega_r^2 + \epsilon^2 \sum_{\substack{i=1, \\ i\neq r}}^\infty \eta_i^2 \omega_i^2\right) \left(1 - \epsilon^2 \sum_{\substack{i=1, \\ i\neq r}}^\infty \eta_i^2 + \order{\epsilon^4} \right) \\
+    &= \omega_r^2 + \epsilon^2 \sum_{\substack{i=1, \\ i\neq r}}^\infty \eta_i^2 (\omega_i^2 - \omega_r^2) + \order{\epsilon^4}.
 \end{aligned}
 \end{equation}
-where the $i\neq r$ subscript is not needed as $\omega_i^2 - \omega_r^2 = 0$ when $i = r$.
-By dropping higher order terms and substituting $\epsilon_i = \epsilon \eta_i$, we recover Rayleigh's principle \cref{eqn:hw3_p6_rayleigh_principle}.
+By dropping higher order terms and substituting $\epsilon_i = \epsilon \eta_i$ for $i \neq r$, we recover Rayleigh's principle \cref{eqn:hw3_p6_rayleigh_principle}.
