@@ -55,6 +55,8 @@
 \newcommand{\trace}[1]{\ensuremath{\textrm{tr} \left( #1 \right)}}
 \newcommand{\cofactor}[1]{\ensuremath{\textrm{cof} \left( #1 \right)}}
 \newcommand{\adjoint}[1]{\ensuremath{\textrm{adj} \left( #1 \right)}}
+\newcommand{\real}[1]{\ensuremath{\mathfrak{Re}\left[#1\right]}}
+\newcommand{\imag}[1]{\ensuremath{\mathfrak{Im}\left[#1\right]}}
 
 \newcommand{\code}[1]{\texttt{#1}}
 
@@ -67,8 +69,14 @@
 \newcommand{\todo}[1]{\textcolor{blue}{TODO: #1}}
 \newcommand{\note}[1]{\textcolor{blue}{#1}}
 
-\renewcommand{\emph}[1]{\ul{\textit{#1}}}
+\renewcommand{\emph}[1]{\ul{#1}}
 \renewcommand{\mark}[1]{\textcolor{red}{#1}}
+
+\makeatletter
+\newcommand*{\Rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\allowdisplaybreaks{}
 
 % Problem Environment
 \newenvironment{problem}
